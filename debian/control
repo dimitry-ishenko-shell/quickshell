@@ -1,0 +1,63 @@
+Source: quickshell
+Section: x11
+Priority: optional
+Maintainer: Dimitry Ishenko <dimitry.ishenko@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ cmake,
+ debhelper-compat (= 13),
+ libcli11-dev,
+ libdrm-dev,
+ libegl1-mesa-dev,
+ libgbm-dev,
+ libjemalloc-dev,
+ libpam0g-dev,
+ libpipewire-0.3-dev,
+ libpolkit-agent-1-dev,
+ libwayland-client0,
+ libwayland-dev,
+ ninja-build,
+ pkgconf,
+ qt6-base-dev,
+ qt6-declarative-dev,
+ qt6-declarative-private-dev,
+ qt6-shadertools-dev,
+ qt6-svg-dev,
+ qt6-wayland,
+ qt6-wayland-dev,
+ qt6-wayland-private-dev,
+ spirv-tools,
+ wayland-protocols (>= 1.41),
+Standards-Version: 4.6.2
+Homepage: https://quickshell.org
+Vcs-Browser: https://git.outfoxxed.me/quickshell/quickshell
+Vcs-Git: https://git.outfoxxed.me/quickshell/quickshell.git
+
+Package: quickshell
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Flexible toolkit for making desktop shells with QtQuick
+ Quickshell is a toolkit for building a desktop shell, which is to say
+ components of your desktop like bars, widgets, lock screens, display managers,
+ and the like.
+ .
+ Quickshell is based on QtQuick and configured with QML, the QtQuick interface
+ description language. It provides integrations for common shell functionality,
+ as well as support for hot reloading and tools to work with processes,
+ sockets, files, and more.
+ .
+ Built-in integrations are currently provided for:
+ .
+  * Wayland and X11 for windowing
+  * Wayland for window management and screen recording
+  * Workspace management in Hyprland, I3, and Sway
+  * Pipewire for audio controls
+  * BlueZ for bluetooth
+  * Pam for authentication and building lockscreens
+  * Greetd for building a display manager
+  * UPower for monitoring battery statistics
+  * Power Profiles Daemon
+  * MPRIS compatible media players
+  * StatusNotifierItem compatible system tray clients

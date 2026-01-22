@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+
+%:
+	dh $@ --buildsystem=cmake+ninja
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		-DCMAKE_BUILD_TYPE=RelWithDebInfo          \
+		-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH) \
+		-DCRASH_REPORTER=OFF                       \
+		-DDISTRIBUTOR="Debian"                     \
+		-DDISTRIBUTOR_DEBUGINFO_AVAILABLE=YES      \
+		-DINSTALL_QML_PREFIX=$(DEB_HOST_MULTIARCH) \
+		-DHYPRLAND=OFF -DI3=OFF -DNO_PCH=YES -DX11=OFF
+
+override_dh_auto_test:

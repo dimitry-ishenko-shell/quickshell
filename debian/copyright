@@ -1,0 +1,16 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://quickshell.org/
+Upstream-Name: quickshell
+Upstream-Contact: outfoxxed <outfoxxed@outfoxxed.me>
+
+Files:
+ *
+Copyright:
+ 2024-2026, outfoxxed <outfoxxed@outfoxxed.me>
+License: GPL-3 or LGPL-3+
+
+Files:
+ debian/*
+Copyright:
+ 2026, Dimitry Ishenko <dimitry.ishenko@gmail.com>
+License: GPL-3+
