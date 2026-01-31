@@ -38,6 +38,7 @@ Architecture: any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
+ qt6-wayland,
 Description: Flexible toolkit for making desktop shells with QtQuick
  Quickshell is a toolkit for building a desktop shell, which is to say
  components of your desktop like bars, widgets, lock screens, display managers,
