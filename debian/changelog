@@ -1,3 +1,9 @@
+quickshell (0.2.1-2) unstable; urgency=medium
+
+  * d/control: explicit depend on qt6-wayland
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Fri, 30 Jan 2026 23:28:12 -0500
+
 quickshell (0.2.1-1) unstable; urgency=medium
 
   * Add Debian packaging
